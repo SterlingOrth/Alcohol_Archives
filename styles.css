@@ -1,0 +1,24 @@
+body {
+  background-image: url(https://images.unsplash.com/photo-1579894059380-1866b68bce6b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60);
+  background-size: auto;
+}
+
+#UItitle {
+  text-align: center;
+  background-color: brown;
+  color: white;
+  opacity: 0.8;
+  margin-top: 300px;
+}
+
+.buttons {
+  margin-left: 145px;
+  border-radius: 25%;
+}
+
+.dropdown {
+  margin-left: 145px;
+  margin-right: 145px;
+  margin-right
+  background-color: white;
+}
