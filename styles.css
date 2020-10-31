@@ -14,13 +14,35 @@ body {
 }
 
 .buttons {
-    margin-left: 50%;
+    margin-left: 38%;
     border-radius: 50%;
   }
 
 .dropdown {
-  margin-left: 145px;
+  margin-left: 39%;
   margin-right: 145px;
   margin-right
-  background-color: white;
+  background-color: blue;
+}
+
+.Movie-display {
+  background-color: black;
+  opacity: 0.9;
+  margin-top: 50px;
+  color: greenyellow;
+  font-weight: bold;
+}
+
+p {
+  color: purple;
+}
+
+h4 {
+  color: red;
+}
+
+table, tr {
+  border: 10px;
+  border-bottom: solid white;
+  
 }
