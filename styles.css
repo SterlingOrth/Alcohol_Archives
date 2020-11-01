@@ -1,36 +1,63 @@
 body {
-  background-image: url(https://images.unsplash.com/photo-1579894059380-1866b68bce6b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60);
-  background-size: auto;
-  height: 100%;
-  width: auto;
+  background-image: url(./Assets/EnterTheDB.jpg);
 }
 
-#UItitle {
+h1 {
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 20%;
   text-align: center;
-  background-color: brown;
-  color: white;
-  opacity: 0.8;
-  margin-top: 10%;
+  background-color: #dfda3b;
+  color: rgb(244, 65, 0);
+  opacity: 0.9;
+  font-family: "Krona One", sans-serif;
 }
 
 .buttons {
-    margin-left: 38%;
-    border-radius: 50%;
-  }
+  margin-left: 38%;
+  border-radius: 50%;
+  margin-left: 38%;
+}
+
+.button {
+  border-radius: 10%;
+  background-color: rgb(32, 130, 147);
+  opacity: 0.8;
+  border-width: 2px;
+  border-color: #dfda3b;
+  font-family: "Krona One", sans-serif;
+}
+
+#tv {
+  color: white;
+  font-weight: bolder;
+}
+
+#movie {
+  color: white;
+  font-weight: bolder;
+}
 
 .dropdown {
-  margin-left: 39%;
+  margin-left: 44%;
   margin-right: 145px;
-  margin-right
-  background-color: blue;
+  margin-bottom: 150px;
+}
+
+#ListBox1 {
+  background-color: #dfda3b;
+  opacity: 0.9;
+  color: rgb(244, 65, 0);
+  font-family: "Krona One", sans-serif;
+  font-size: 15px;
 }
 
 .Movie-display {
   background-color: black;
   opacity: 0.9;
-  margin-top: 50px;
   color: greenyellow;
   font-weight: bold;
+  margin: 5%;
 }
 
 p {
@@ -41,8 +68,8 @@ h4 {
   color: red;
 }
 
-table, tr {
+table,
+tr {
   border: 10px;
   border-bottom: solid white;
-  
 }

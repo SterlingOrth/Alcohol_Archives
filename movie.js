@@ -51,7 +51,7 @@ fetch (movieApi)
         var titleData = document.createElement("td")
 
         var poster = document.createElement("img")
-        var posterImgURL = 'https://image.tmdb.org/t/p/w300' + postImg;
+        var posterImgURL = 'https://image.tmdb.org/t/p/w500' + postImg;
        
         var itemDisplay = document.createElement("h3")
         var description = results.results[i].overview;
