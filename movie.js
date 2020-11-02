@@ -21,6 +21,7 @@ var APIkey = "b16247e3c7a3350acf15d3581ce27109&language=en-US"
 // Genre onclick 
 function movieGenreRequest(){
 
+
 var movieApi = 'https://api.themoviedb.org/3/discover/movie?with_genres=' + movieCode + '&api_key=b16247e3c7a3350acf15d3581ce27109&language=en-US';
 
 fetch (movieApi)
@@ -38,9 +39,14 @@ fetch (movieApi)
     table.appendChild(tableRow);
 
     movieDiv.appendChild(table);
+
     
+  
 
     for(var i = 10; i < results.results.length; i++) {
+
+        
+
         var title = results.results[i].original_title;
         console.log(title)
         // table row and data
