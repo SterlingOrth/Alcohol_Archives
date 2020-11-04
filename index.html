@@ -12,27 +12,29 @@
       crossorigin="anonymous"
     />
 
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
     <!-- Compressed JavaScript -->
 
     <link rel="stylesheet" href="./styles.css" />
   </head>
 
   <body>
-    <div id="UItitle">
+    <header>
+      <h1>R.E.D.B</h1>
+    </header>
+    <!-- <div id="UItitle">
       <h1>It's... Show Time!</h1>
-    </div>
+    </div> -->
 
     <div class="buttons">
-      <a id="tv" class="button large">TV</a>
-      <a id="movie" class="button large">Movie</a>
+      <a id="tv" class="button large">Shows</a>
+      <a id="movie" class="button large">Movies</a>
     </div>
 
     <div class="row">
       <div class="columns">
         <ul class="dropdown menu" data-dropdown-menu>
-          <li>
-            <a href="#Item 2">Item 2</a>
-            <a href="#ListBox1">ListBox1</a>
+          <li id="dropdownBox">
             <select name="dropdown menu" size="4" multiple="multiple"
             id="ListBox1" style="height:113px;width:141px;Z-INDEX:
             145; LEFT: 2px; POSITION: absolute; TOP: 5px">
@@ -43,7 +45,7 @@
               <option class="syfy" data-code="878" value="Syfy">Syfy</option>
               <option class="thriller" data-code="53" value="Thriller">Thriller</option>
               <option class="drama" data-code="18" value="Drama">Drama</option>
-              <option class="animation" data-code="16" value="Animation">Drama</option>
+              <option class="animation" data-code="16" value="Animation">Animation</option>
             </select>
 
     </div>
