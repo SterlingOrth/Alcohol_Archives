@@ -1,7 +1,7 @@
 // $(document).ready(function () {
 
 var movieBtn = document.getElementById("movie")
-// var tvBtn = document.getElementById("tv")
+var drinkBtn = document.getElementById("drinks")
 
 // var movieCode = "";
 
@@ -19,6 +19,7 @@ var APIkey = "b16247e3c7a3350acf15d3581ce27109&language=en-US"
 
 // Movie or TV onclick - choose the data fetch
 // Genre onclick 
+// Movie Button function
 function movieGenreRequest(){
 
 
@@ -29,19 +30,16 @@ fetch (movieApi)
     return response.json();
 }).then (function(results){
     console.log(results)
-    
+  // variables containing elements
    var table = document.createElement("table");
     var tablePoster = document.createElement("th")
     var tableTitle = document.createElement("th")
     var tableRow = document.createElement("tr");
+    // appending elements to html
     tableRow.appendChild(tablePoster);
     tableRow.appendChild(tableTitle);
     table.appendChild(tableRow);
-
     movieDiv.appendChild(table);
-
-    
-  
 
     for(var i = 10; i < results.results.length; i++) {
 
@@ -64,11 +62,8 @@ fetch (movieApi)
         var textDesc = document.createElement("p")
         var rating = document.createElement("h4")
         var ratingScore = results.results[i].vote_average;
-
        
-       
-       
-        itemDisplay.textContent=title
+        itemDisplay.textContent = title
        
         textDesc.textContent = description
         
@@ -86,12 +81,9 @@ fetch (movieApi)
        
         // document.querySelector(".Movie-display").appendChild(title)
     }
-
 })
 console.log()
-
 }
-
 
 var action = document.querySelector(".action")
 
@@ -165,7 +157,8 @@ thriller.addEventListener('click', function(){
 })
 
 
+// random drink pair function
+
 movieBtn.addEventListener('click', movieGenreRequest)
 
 
-// });
