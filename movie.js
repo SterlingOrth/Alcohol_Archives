@@ -1,7 +1,7 @@
 // $(document).ready(function () {
 
 var movieBtn = document.getElementById("movie")
-var drinkBtn = document.getElementById("drinks")
+
 
 // var movieCode = "";
 
