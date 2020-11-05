@@ -22,6 +22,7 @@ var APIkey = "b16247e3c7a3350acf15d3581ce27109&language=en-US"
 // Movie Button function
 function movieGenreRequest(){
 
+
 var movieApi = 'https://api.themoviedb.org/3/discover/movie?with_genres=' + movieCode + '&api_key=b16247e3c7a3350acf15d3581ce27109&language=en-US';
 
 fetch (movieApi)
@@ -41,6 +42,9 @@ fetch (movieApi)
     movieDiv.appendChild(table);
 
     for(var i = 10; i < results.results.length; i++) {
+
+        
+
         var title = results.results[i].original_title;
         console.log(title)
         // table row and data
@@ -51,7 +55,7 @@ fetch (movieApi)
         var titleData = document.createElement("td")
 
         var poster = document.createElement("img")
-        var posterImgURL = 'https://image.tmdb.org/t/p/w300' + postImg;
+        var posterImgURL = 'https://image.tmdb.org/t/p/w500' + postImg;
        
         var itemDisplay = document.createElement("h3")
         var description = results.results[i].overview;
