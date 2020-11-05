@@ -3,14 +3,6 @@
 var movieBtn = document.getElementById("movie")
 
 
-// var movieCode = "";
-
-// if (movieCode === "") {
-//     movieBtn.style.display = "none";
-// } else {
-//     movieBtn.style.display = "show";
-// }
-
 var movieCode = 18
 var movieDiv = document.querySelector(".Movie-display")
 var APIkey = "b16247e3c7a3350acf15d3581ce27109&language=en-US"
@@ -30,6 +22,9 @@ fetch (movieApi)
     return response.json();
 }).then (function(results){
     console.log(results)
+
+    movieDiv.innerHTML = "";
+
   // variables containing elements
    var table = document.createElement("table");
     var tablePoster = document.createElement("th")
@@ -53,6 +48,7 @@ fetch (movieApi)
         var posterData = document.createElement("td")
         var row = document.createElement("tr")
         var titleData = document.createElement("td")
+        var likeBtn = document.createElement("button")
 
         var poster = document.createElement("img")
         var posterImgURL = 'https://image.tmdb.org/t/p/w500' + postImg;
@@ -63,6 +59,10 @@ fetch (movieApi)
         var rating = document.createElement("h4")
         var ratingScore = results.results[i].vote_average;
        
+
+        likeBtn.textContent = "Favorite"
+        likeBtn.id = "favoriteBtn"
+        likeBtn.setAttribute("data-title", title);
         itemDisplay.textContent = title
        
         textDesc.textContent = description
@@ -74,6 +74,7 @@ fetch (movieApi)
         titleData.appendChild(rating)
         poster.setAttribute("src", posterImgURL);
         posterData.appendChild(poster)
+        titleData.appendChild(likeBtn)
         row.appendChild(titleData)
         row.appendChild(posterData)
         table.appendChild(row)
@@ -81,18 +82,40 @@ fetch (movieApi)
        
         // document.querySelector(".Movie-display").appendChild(title)
     }
+    var favBtn = document.getElementById("favoriteBtn")
+    
+    var favorites = JSON.parse(localStorage.getItem("favoritesList")) || []
+    
+    // unique ID on each BTN 1-10 -specific ID's 
+    // only returning FIRST button value of every GENRE
+    favBtn.addEventListener('click',function() {
+    console.log("clicked")
+    
+    var favoritesClicked = this.getAttribute("data-title")
+    favorites.push(favoritesClicked)
+    
+    localStorage.setItem("favoritesList", JSON.stringify(favorites))
+    
+    console.log(favoritesClicked)
 })
-console.log()
+
+
+})
+
+
+
+    
+
 }
+
+
+
 
 var action = document.querySelector(".action")
 
 action.addEventListener('click', function(){ 
     movieCode = this.getAttribute("data-code")
     console.log(movieCode);
-
-
-
 })
 
 // we need to create buttons of these 
@@ -102,7 +125,6 @@ var drama = document.querySelector(".drama")
 drama.addEventListener('click', function(){
     movieCode = this.getAttribute("data-code")
     console.log(movieCode)
-
 
 })
 
