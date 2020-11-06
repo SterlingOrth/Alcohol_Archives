@@ -4,41 +4,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Entertainment Random</title>
-    <!-- Compressed CSS -->
+    <!-- Foundation CSS -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
       integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I="
       crossorigin="anonymous"
     />
+    <!-- Font Awesome -->
 <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
-    <!-- Compressed JavaScript -->
+    <!-- CSS LINK -->
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <header>
       <h1>ALCOHOL ARCHIVE</h1>
     </header>
-    <!-- <div id="UItitle">
-      <h1>It's... Show Time!</h1>
-    </div> -->
+
+    <!-- MOVIE & DRINK BUTTONS -->
     <div class="buttons">
       <a id="drinks" class="button large">Drinks</a>
       <a id="movie" class="button large">Movies</a>
     </div>
-    <div id="favoriteStorage"></div>
+
+
+    <!-- GENRE DISPLAY/DROPDOWN DIV -->
     <div class="row">
       <div class="columns">
         <ul class="dropdown menu" data-dropdown-menu>
           <li id="dropdownBox">
             <select name="dropdown menu" size="6" multiple="multiple"
-            id="ListBox1" style=" height:10vh; width:10vw;Z-INDEX:
+            id="ListBox1" style="height:113px;width:150px;Z-INDEX:
             145; LEFT: 2px; POSITION: absolute; TOP: 5px">
               <option class="action" data-code="28" value="Action">Action</option>
               <option class="comedy" data-code="35" value="Comedy">Comedy</option>
@@ -51,22 +54,20 @@
             </select>
     </div>
 
+<!-- LOCAL STORAGE / Favorites Button -->
     <div class = "favorites"></div>
+
+    <!-- MOVIE / DRINK Display -->
     <container>
       <div class="Movie-display">
       </div>
     </container>
-    <!-- <script
-      src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"
-      ;
-      integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o="
-      ;
-      crossorigin="anonymous"
-      ;
-    ></script> -->
+
       <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <!-- LINK TO DRINK JS -->
     <script src="./drinks.js"></script>
+    <!-- LINK TO MOVIE JS -->
     <script src="./movie.js"></script>
   </body>
 </html>
