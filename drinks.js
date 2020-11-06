@@ -29,8 +29,12 @@ function randomDrinkRequest(){
         
         var drinkTitle = results.drinks[0].strDrink;
         console.log(drinkTitle)
-    //     // table row and data
+
+        var alcoholOrNon = results.drinks[0].strAlcoholic;
         var drinkImg  = results.drinks[0].strDrinkThumb;
+        var instructions = results.drinks[0].strInstructions;
+        var drinkGlass = results.drinks[0].strGlass;
+
         console.log(drinkImg)
 
         var posterData = document.createElement("td")
@@ -38,16 +42,39 @@ function randomDrinkRequest(){
         var titleData = document.createElement("td")
 
         var drinkPoster = document.createElement("img")
-        // var posterImgURL = 'https://image.tmdb.org/t/p/w500' + drinkImg;
+        drinkPoster.style.height="auto"
+        drinkPoster.style.width="50%"
+        drinkPoster.style.float="right"
        
         var itemDisplay = document.createElement("h3")
-       
+        itemDisplay.style.textAlign = "center"
+        itemDisplay.style.marginLeft = "20vw"
         itemDisplay.textContent = drinkTitle
 
+        var alcoholDesc = document.createElement("p")
+        alcoholDesc.textContent = alcoholOrNon
+        alcoholDesc.style.textAlign = "center"
+        alcoholDesc.style.marginLeft = "20vw"
+
+        var drinkGlassDisplay = document.createElement("p")
+        drinkGlassDisplay.textContent = "Best Served in: " + drinkGlass
+        drinkGlassDisplay.style.textAlign = "center"
+        drinkGlassDisplay.style.marginLeft = "20vw"
+
+
+        var instructionsDisplay = document.createElement ("h4")
+        instructionsDisplay.textContent = instructions
+        instructionsDisplay.style.textAlign = "center"
+        instructionsDisplay.style.marginLeft = "20vw"
+
+
         titleData.appendChild(itemDisplay)
+        titleData.appendChild(alcoholDesc)
+        titleData.appendChild(drinkGlassDisplay)
+        titleData.appendChild(instructionsDisplay)
         // titleData.appendChild(textDesc)
         // titleData.appendChild(rating)
-        // drinkPoster.setAttribute("src", drinkImg);
+        drinkPoster.setAttribute("src", drinkImg);
         // drinkPoster.appendChild(drinkImg)
         // posterData.appendChild(drinkImg)
         posterData.appendChild(drinkPoster)
