@@ -9,8 +9,14 @@ header {
   background-color: #dfda3b;
   color: rgb(244, 65, 0);
   opacity: 0.9;
+}
+
+header h1 {
+  margin-left: 5vw;
+  padding: 10px;
   font-family: "Krona One", sans-serif;
 }
+
 h3 {
   margin-top: 5px;
   margin-left: 10px;
@@ -36,7 +42,7 @@ td {
   background-color: white;
   opacity: 0.9;
 }
-/* LIKE Button */
+/* FAVORITE Button */
 button {
   background-color: #dfda3b;
   margin-left: 1%;
@@ -47,9 +53,9 @@ button {
 }
 /* GENRE Buttons */
 .buttons {
-  margin-top: 2%;
+  margin-top: 2vw;
+  margin-left: 34vw;
   border-radius: 50%;
-  margin-left: 36%;
 }
 .button {
   border-radius: 10%;
@@ -60,8 +66,7 @@ button {
   font-family: "Krona One", sans-serif;
 }
 .dropdown {
-  margin-left: 42%;
-  margin-right: 145px;
+  margin-left: 40vw;
   margin-bottom: 150px;
 }
 .Movie-display {
