@@ -1,6 +1,6 @@
 # Alcohol Archives
 
-DEPLOYED: https://sterlingorth.github.io/Movie_Time/
+DEPLOYED: https://sterlingorth.github.io/Alcohol_Archives/
 REPO: https://github.com/SterlingOrth/Movie_Time.git
 
 We provide a solution to those date night lulls. We answer the questions
